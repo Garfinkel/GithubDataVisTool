@@ -1,0 +1,24 @@
+{
+  "scriptFile": "__init__.py",
+  "bindings": [
+    {
+      "type": "blobTrigger",
+      "direction": "in",
+      "name": "inputblob",
+      "connection": "build2020pyvsc_connectionstring",
+      "path": "raw"
+    },
+    {
+      "name": "outputdb",
+      "type": "cosmosDB",
+      "direction": "out",      
+      "databaseName": "primary",
+      "collectionName": "raw",
+      "leaseCollectionName": "leases",
+      "createLeaseCollectionIfNotExists": true,
+      "connectionStringSetting": "build2020pyvscdb_connectionstring",
+      "createIfNotExists": true
+    }
+  ]
+}
+

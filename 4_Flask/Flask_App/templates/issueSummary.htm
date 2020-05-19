@@ -1,0 +1,29 @@
+{% extends "./base.html" %}
+
+{% block content %}
+<section class="section has-background-light">
+    <div class="container">
+      <h1 class="title">Issue Details</h1>
+      <h2 class="subtitle">
+        This page contains all details for a single issue
+      </h2>
+      <br>
+        <table class="table">
+          <thead>
+            <tr>
+              <th><abbr title="Attribute">Attribute</abbr></th>
+              <th><abbr title="Value">Value</abbr></th>
+            </tr>
+          </thead>
+          {% for x in singleitem%}
+          <tbody>
+            <tr>
+              <th>{{x}}</a></th>
+              <td>{{singleitem[x]}}</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+        </table>
+    </div>
+</section>
+{% endblock %}

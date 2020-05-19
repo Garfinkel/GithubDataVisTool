@@ -1,0 +1,26 @@
+{% extends "./base.html" %}
+
+{% block content %}
+<section class="section has-background-light">
+    <div class="container">
+      <h1 class="title">Build Python apps in Azure faster with Visual Studio Code</h1>
+      <h2 class="subtitle">
+        Presented by <a href="https://www.linkedin.com/in/nicolas-garfinkel/">Nicolas Garfinkel</a> (May 2020)</h2>
+    </div>
+</section>
+<section class="section">
+    <div class="container">
+      <h1 class="title">Webapp Overview</h1>
+      <h2 class="subtitle">
+        This webapp is hosted on <a href="https://docs.microsoft.com/en-us/azure/app-service/containers/quickstart-python?tabs=bash">Azure App Service</a> and uses the <a href="https://aka.ms/azsdk/python">Python SDK</a> to read from <a href="https://docs.microsoft.com/en-us/azure/cosmos-db/">CosmosDB</a>.
+      </h2>
+      <h3 class="is-size-5"><strong>About me</strong>: I was built as part of a BUILD 2020 talk to show off how productive you can be when you use VS Code to build apps in Azure! You can find the GitHub repo, and all sorts of resources by visiting the following link: <a href="https://aka.ms/Build2020pyvsc">aka.ms/Build2020pyvsc</a>.</h3>
+</section>
+<br>
+<section class="section">
+        <img src="{{url_for('static', filename='slide_arch.JPG')}}" width="1200" height="1200">
+</section>
+    </div>
+</section>
+
+{% endblock %}

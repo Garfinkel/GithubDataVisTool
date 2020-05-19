@@ -1,0 +1,31 @@
+{% extends "./base.html" %}
+
+{% block content %}
+<section class="section has-background-light">
+    <div class="container">
+      <h1 class="title">Summary</h1>
+      <h2 class="subtitle">
+        Enter the name of your repo, to return issue details.
+      </h2>
+      <div class="field is-horizontal">
+        <div class="field-body">
+          <div class="field">
+            <p class="control is-expanded has-icons-left">
+              <form action = "/repoSummary" method = "POST">
+                <input class="input is-rounded is-large" type="text" placeholder="ie: Microsoft/vscode-python" name="RepoName">
+              <span class="icon is-small is-left">
+              </span>
+            </p>
+          </div>
+          <div class="field">
+            <div class="control">
+              <p><input class="button is-large is-link is-info" type = "submit" value = "submit" /></p>            
+            </div>
+          </div>
+        </form>
+        </div>
+      </div>
+    </div>
+</section>
+
+{% endblock %}

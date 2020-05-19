@@ -1,0 +1,25 @@
+{% extends "./base.html" %}
+
+{% block content %}
+<section class="section has-background-light">
+    <div class="container">
+      <h1 class="title">IssueId Lookup</h1>
+      <h2 class="subtitle">
+        Include the IssueId and RepoName to lookup invidual issues.
+      </h2>
+        <div class="field-body">
+          <div class="field">
+            <p class="control is-expanded has-icons-left">
+              <form action = "/issueSummary" method = "POST">
+                <input class="input is-rounded is-large" type="text" placeholder="ie: 19592139521" name="IssueId">
+                <input class="input is-rounded is-large" type="text" placeholder="ie: Microsoft/vscode-python" name="IssueRepoName">
+                <br>
+                <br>
+                <input class="button is-large is-link is-info" type = "submit" value = "submit" />
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+</section>
+{% endblock %}

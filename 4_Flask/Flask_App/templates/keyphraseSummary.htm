@@ -1,0 +1,33 @@
+{% extends "./base.html" %}
+
+{% block content %}
+<section class="section has-background-light">
+    <div class="container">
+      <h1 class="title">Issue Details</h1>
+      <h2 class="subtitle">This page contains all details for a single key phrase</h2>
+      <table class="table">
+        <thead>
+          <tr>
+            <th><abbr title="Issue Id">Id</abbr></th>
+            <th><abbr title="Issue Title">Issue</abbr></th>
+            <th><abbr title="Create Date">Date</abbr></th>
+            <th><abbr title="Link to GitHub">Link</abbr></th>
+            <th><abbr title="Key Phrases">KRs</abbr></th>
+          </tr>
+        </thead>
+        {% for item in output.itertuples() %}
+        <tbody>
+          <tr>
+            <th><a href="/r/{{item.repo_name}}/i/{{item.id}}">{{item.id}}</a></th>
+            <td>{{item.issue_title}}</td>
+            <td>{{item.created_datetime}}</td>
+            <td><a href="{{item.issue_url}}">link to GH</a></td>
+            <td>{{item.NER}}</td>
+          </tr>
+        </tbody>
+        {% endfor %}
+      </table>
+    </div>
+</section>
+
+{% endblock %}

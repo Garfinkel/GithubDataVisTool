@@ -1,0 +1,62 @@
+{% extends "./base.html" %}
+
+{% block content %}
+<div class="columns">
+    <div class="column">
+        <h1 class="title">Overview</h1>
+        <p>Results for Repo: {{overview_data['RepoName']}}</p>
+        <p>Repo ID: {{overview_data['RepoId']}}</p>
+        <p>Total Issues: {{overview_data['TotalIssues']}}</p>    
+        <p>Most Recent: {{overview_data['MostRecent']}}</p>    
+    </div>
+</div>
+<div class="columns">
+    <div class="column is-one-third">
+        <h1 class="title">Top Key Phrases</h1>
+          <table class="table">
+            <thead>
+              <tr>
+                <th><abbr title="Key Phrase">Key Phrase</abbr></th>
+                <th>Count</th>
+                <th>Pct_of_total</th>
+
+              </tr>
+            </thead>
+            {% for item in TopIssues.itertuples() %}
+            <tbody>
+              <tr>
+                <th><a href="/r/{{item.RepoName}}/kp/{{item.NER}}">{{item.NER}}</a></th>
+                <td>{{item.Count}}</td>
+                <td>{{item.Pct}}</td>
+              </tr>
+            {% endfor %}
+          </tbody>
+          </table>
+    </div>
+    <div class="column">
+        <h1 class="title">Most Recent Issues</h1>
+        <table class="table">
+          <thead>
+            <tr>
+              <th><abbr title="Issue Id">Id</abbr></th>
+              <th><abbr title="Issue Title">Issue</abbr></th>
+              <th><abbr title="Create Date">Date</abbr></th>
+              <th><abbr title="Link to GitHub">Link</abbr></th>
+              <th><abbr title="Key Phrases">KRs</abbr></th>
+            </tr>
+          </thead>
+          {% for mr_item in recentIssue.itertuples() %}
+          <tbody>
+            <tr>
+              <th><a href="/r/{{mr_item.repo_name}}/i/{{mr_item.id}}">{{mr_item.id}}</a></th>
+              <td>{{mr_item.issue_title}}</td>
+              <td>{{mr_item.created_datetime}}</td>
+              <th><a href="{{mr_item.issue_url}}">link to GH</a></th>
+              <td>{{mr_item.NER}}</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}

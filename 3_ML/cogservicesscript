@@ -1,0 +1,13 @@
+# Log into CLI (requires you to download az cli)
+az login
+
+# Create Resouce Group
+az group create --name ExampleRG  --location westus (group already exists at this point)
+
+# Create Text Analytics Service
+az cognitiveservices account create --name ExampleName --resource-group ExampleRG --kind TextAnalytics --sku F0 --location westus
+
+#Get Keys
+az cognitiveservices account keys list --name ExampleName --resource-group ExampleRG
+
+

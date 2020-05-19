@@ -1,0 +1,26 @@
+{
+  "scriptFile": "__init__.py",
+  "bindings": [
+    {
+      "type": "cosmosDBTrigger",
+      "name": "documents",
+      "direction": "in",
+      "leaseCollectionName": "leases",
+      "connectionStringSetting": "build2020pyvscdb_connectionstring",
+      "databaseName": "primary",
+      "collectionName": "raw",
+      "createLeaseCollectionIfNotExists": true
+    },
+    {
+      "name": "outdoc",
+      "type": "cosmosDB",
+      "direction": "out",      
+      "databaseName": "primary",
+      "collectionName": "final",
+      "leaseCollectionName": "leases",
+      "createLeaseCollectionIfNotExists": true,
+      "connectionStringSetting": "build2020pyvscdb_connectionstring",
+      "createIfNotExists": true
+    }
+  ]
+}

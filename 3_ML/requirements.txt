@@ -1,0 +1,7 @@
+azure-functions
+pandas
+numpy
+ujson
+azure.cognitiveservices.language.textanalytics
+msrest
+azure-search-documents==1.0.0b3
