@@ -15,7 +15,7 @@ Slides can be found in this Github Repo
 - Python 3.6/3.7: https://www.python.org/downloads/release/python-377/
 - Azure Subscription: https://aka.ms/pythonazurefree
 - VS Code: https://aka.ms/pythonvscode
-- VS Code Extenions - Install in product with the extensions tab (Azure Account extension, + Azure Services extensions)
+- VS Code Extensions - Install in product with the extensions tab (Azure Account extension, + Azure Services extensions)
 
 **Talk to us! Seriously!**
 - Join us on Discord: https://aka.ms/Build2020-PythonVSC
