@@ -19,4 +19,4 @@ Slides can be found in this Github Repo
 
 **Talk to us! Seriously!**
 - Join us on Discord: https://aka.ms/Build2020-PythonVSC
-- Tell us about your Python experiance on Azure: https://aka.ms/Build2020-PythonAzure-Survey
+- Tell us about your Python experience on Azure: https://aka.ms/Build2020-PythonAzure-Survey
