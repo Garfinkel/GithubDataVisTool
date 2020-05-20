@@ -5,8 +5,8 @@ Resources, and code for the BUILD 2020 live Q+A session "Build Python apps in Az
 Slides can be found in this Github Repo
 
 **Resources**
-- Azure Functions: https://azure.microsoft.com/en-us/services/functions/
-- Azure App Service: https://azure.microsoft.com/en-us/services/app-service/
+- Azure Functions: https://docs.microsoft.com/en-us/azure/azure-functions/functions-create-first-function-vs-code?pivots=programming-language-python
+- Azure App Service: https://docs.microsoft.com/en-us/samples/azure-samples/python-docs-hello-world/python-flask-sample-for-azure-app-service-linux/
 - Cognitive Services: https://azure.microsoft.com/en-us/services/cognitive-services/
 - CosmosDB: https://azure.microsoft.com/en-us/services/cosmos-db/
 - Azure Blob Storage: https://azure.microsoft.com/en-us/services/storage/blobs/
